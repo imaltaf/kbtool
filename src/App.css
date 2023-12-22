@@ -1,6 +1,16 @@
 .App {
   text-align: center;
 }
+.App {
+  display: grid;
+  gap: 20px; /* Spacing between grid items */
+}
+body {
+  background-color: #060c21; /* Set your desired background color here */
+  margin: 20px; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Set preferred font family */
+}
+
 
 .App-logo {
   height: 40vmin;
