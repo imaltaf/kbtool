@@ -1,39 +1,36 @@
 /* Dark glass background */
 .transaction-container {
-  width: 80%;
-  margin: 20px auto;
-  padding: 20px;
+  width: 90%;
+  margin: 10px auto;
+  padding: 0px;
   background-color: #1d2b3a;
-  border-radius: 2px;
-  box-sizing: border-box;
-  padding: 24px 20px;
+  border-radius: 25px; /* Adjusted border-radius */
+  padding: 1px 1px;
   cursor: pointer;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 14px;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: rgb(255, 255, 255);
   text-decoration: none;
-  column-gap: 17px;
-  border-width: 5px;
   transition: border-color 0.3s ease, border-radius 0.3s ease;
-  border-style: solid;
-  border-image: linear-gradient(235deg, #89ff00, #060c21, #00bcda) 1;
-}
+  position: relative; /* Add a position */
+  z-index: 1; /* Ensure it's behind other elements */
+  backdrop-filter: blur(10px); /* Blur effect for glassy look */
+  box-shadow: 0px 0px 8px 6px rgba(255, 215, 0, 0.8); /* Golden fire-like color */
+  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
 
+
+}
 .transaction-container:hover {
-  border-radius: 10px;
-  border-color: #007bff;
-  animation: pulse 1s infinite;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px 8px rgba(255, 215, 0, 0.8); /* Golden fire-like color */
 }
 
-@keyframes pulse {
-  from {
-    border-color: #9e00b3;
-  }
-  to {
-    border-color: #007bff;
-  }
-}
+
+
+/* Rest of your existing styles */
+
+
 
 .input-row {
   margin-bottom: 20px;
@@ -45,11 +42,11 @@ input {
   border: 2px solid #ddd;
   border-radius: 20px;
   font-size: 14px;
-  transition: all 0.3s ease;
+  background-color: transparent;
+
 }
 
 input:focus {
-  border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
@@ -69,18 +66,15 @@ input:focus {
 
 .copy-button,
 .reset-button {
-  display: flex;
-  flex-direction: row;
-  padding: 10px 20px;
-  margin-right: 10px;
+  background: transparent;
+ padding: 12px 18px;
+  margin-right: 10px; 
   background-color: #1d2b3a;;
   border: 2px solid #007bff;
-  border-radius: 5px;
+  border-radius: 20px;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease; /* Animation for button */
-  display: flex;
-  align-items: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .copy-button:hover {
@@ -96,4 +90,35 @@ input:focus {
 .reset-button:hover {
   background-color: #c82333;
   border-color: #c82333;
+}
+.input-row input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid transparent; /* Set initial border as transparent */
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  transition: border-color 0.3s ease, border-width 0.3s ease; /* Add transition for border color and width */
+}
+.input-row input:focus {
+  border-color: rgba(255, 215, 0, 0.8); /* Golden fire-like color */
+  border-width: 3px; /* Adjust border width */
+}
+
+/* For the final result input */
+.input-row:last-child input[type='text'] {
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.3s ease, height 0.3s ease;
+  background-color: transparent;
+  border: none;
+  color: antiquewhite;
+  font-weight: bold;
+  font-size: x-large; /* Adjusted font size */
+  font-family: 'Roboto', sans-serif; /* Different font family */
+}
+
+.input-row:last-child input[type='text'].visible {
+  opacity: 1;
+  height: auto;
 }

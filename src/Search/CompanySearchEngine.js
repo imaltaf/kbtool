@@ -36,7 +36,7 @@ const CompanySearchEngine = () => {
 
   return (
     <section className="card">
-      <div style={{ color: 'rgb(73, 151, 63)' }} className="header_h1">
+      <div style={{fontWeight: "bold", fontSize: "20px", margin: "20px" }}className="header_h1">
         Company Search Engine
       </div>
 
