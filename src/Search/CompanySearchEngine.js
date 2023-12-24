@@ -35,8 +35,8 @@ const CompanySearchEngine = () => {
   };
 
   return (
-    <section className="card">
-      <div style={{fontWeight: "bold", fontSize: "20px", margin: "20px" }}className="header_h1">
+    <section className="card" style={{color: "whitesmoke"}}>
+      <div style={{fontWeight: "bold", fontSize: "20px", margin: "20px" ,}}className="header_h1">
         Company Search Engine
       </div>
 
@@ -46,6 +46,7 @@ const CompanySearchEngine = () => {
           id="companyName"
           className="company-input"
           placeholder="Enter Company Name"
+          style={{color: "whitesmoke", fontWeight: "bold", fontFamily: ""}}
         />
         <button className="reset-button" onClick={resetInput}>
           <FaUndo className="icon" /> {/* Undo icon */}

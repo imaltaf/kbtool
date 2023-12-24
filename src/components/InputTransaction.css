@@ -43,11 +43,13 @@ input {
   border-radius: 20px;
   font-size: 14px;
   background-color: transparent;
+ 
 
 }
 
 input:focus {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  
 }
 
 /* Initially invisible */

@@ -40,14 +40,14 @@ const InputTransaction = () => {
   return (
     <div className='transaction-container'>
       <h1 >In-put Transaction IDs</h1>
-      <div className="input-row">
+      <div className="input-row" style={{}}>
         {/* <span>Enter customer ID for QID 106 and 117: </span> */}
         <input
           type="text"
           value={customerId}
           onChange={handleCustomerIdChange}
           placeholder="Enter customer ID for QID 106 and 117:"
-          style={{ width: '330px', fontWeight: "bold" }}
+          style={{ width: '330px', fontWeight: "bold", color: "whitesmoke" }}
         />
       </div>
       <div className="input-row">
@@ -56,7 +56,7 @@ const InputTransaction = () => {
           value={enteredIds}
           onChange={handleEnteredIdsChange}
           placeholder="Enter transaction IDs separated by space"
-          style={{ fontFamily: "sans-serif", fontSmooth: "large", fontWeight: "bold", width: '1570px' }}
+          style={{ fontFamily: "sans-serif", fontSmooth: "large", fontWeight: "bold", width: '1570px',color: "whitesmoke" }}
         />
       </div>
       <div className="input-row button-row">
