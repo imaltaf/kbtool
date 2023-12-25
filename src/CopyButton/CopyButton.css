@@ -11,7 +11,7 @@
   font-size: 18px;
   line-height: 22px;
   font-family: 'Roboto', sans-serif;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   column-gap: 19px;
   transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Adding transition */
@@ -19,7 +19,7 @@
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.1); /* Background with opacity */
   backdrop-filter: blur(10px); /* Blur effect for glassy look */
-  border: 20px solid rgba(100, 0, 0, 0.2); /* Transparent border */
+  border: 20px solid rgba(93, 100, 0, 0.644); /* Transparent border */
   border-radius: 20px;
   box-shadow: 0px 0px 8px 6px rgba(255, 215, 0, 0.8); /* Golden fire-like color */
   margin-bottom: 10px;
@@ -67,9 +67,9 @@
 
 .Copy-button {
   background: transparent;
-  border: 2px solid #ffffff;
+  border: 2px solid #af991b8a;
   border-radius: 5px;
-  color: #ffffff;
+  color: #e0c52ab6;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;

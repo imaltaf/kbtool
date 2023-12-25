@@ -98,10 +98,11 @@
   border-color: rgba(255, 215, 0, 0.8); /* Fire-like color */
 }
 /* Colors for each button */
-.zauba { background-color: #ffcc00; }
-.company-check { background-color: #ff6666; }
-.tofler { background-color: #66ccff; }
-.website { background-color: #99ff99; }
+.zauba { background-color: #186280; }
+.company-check { background-color: #6c13fcb7; }
+.tofler { background-color: #6b0c0ca4; }
+.website { background-color: #12d4128e; }
 
 /* Icon styling */
 .icon { margin-right: 8px; }
+

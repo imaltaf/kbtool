@@ -16,18 +16,17 @@ const Navbar = () => {
 
   return (
     <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
-      <Toolbar sx={{ display: 'flex', justifyContent: 'center',marginLeft: "10px" }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', padding: '10px' }}>
         {/* Centered logo */}
         <img src={Logo} alt="Your Logo" height="86px" /> {/* Adjust height as needed */}
 
         {/* Menu button */}
         <IconButton
-         size="larger"
-         edge="end"
-         color="inherit"
+          size="large"
+          edge="end"
+          color="inherit"
           aria-label="menu"
           onClick={handleMenuOpen}
-          style={{margin: "10px"}}
         >
           <MenuIcon />
         </IconButton>
@@ -38,9 +37,26 @@ const Navbar = () => {
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          getContentAnchorEl={null}
+          elevation={0}
+          PaperProps={{
+            style: {
+              background: 'rgba(255, 255, 255, 0.8)',
+              boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.1)',
+              borderRadius: '8px',
+            },
+          }}
         >
-          <MenuItem onClick={handleMenuClose}>KB Tool</MenuItem>
-          <MenuItem onClick={handleMenuClose}>Business Tools</MenuItem>
+          <MenuItem onClick={handleMenuClose}>KB-Tool</MenuItem>
+          <MenuItem onClick={handleMenuClose}>BL-Tools</MenuItem>
         </Menu>
       </Toolbar>
     </AppBar>

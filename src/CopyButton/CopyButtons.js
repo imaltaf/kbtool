@@ -30,25 +30,30 @@ const CopyButton = () => {
   
 
   return (
-    <div style={{border: "20px"}} className='container-button'>
+    <div style={{ border: '2px solid #ddd', borderRadius: '10px', padding: '20px' }} className='container-button'>
       <div className='copy-button-container'>
-        <h1 style={{margin: "10px", padding: "10px"}}> copy-comments</h1>
-        <div className='buttons-container' style={{paddingTop: "15px", margin: "25px"}}>
+        <h1 style={{ margin: '10px', padding: '10px' }}>copy-comments</h1>
+        <div className='buttons-container' style={{ paddingTop: '15px', margin: '25px' }}>
           <div className='button-row-right'>
             <button className='Copy-button' onClick={(e) => handleCopy('QID75-Latest 3-months statement not available, Need Recent 3/6 Months Bank Acc statement Hence Given Preset.', e)}>
-              <FaClipboard style={{ fontSize: '24px' }} /> QID-75 {/* Use the React Icon here */}
+              <span style={{ marginRight: '10px' }}>QID-75</span>
+              <FaClipboard style={{ fontSize: '24px', color: '#3498db' }} />
             </button>
             <button className='Copy-button' onClick={(e) => handleCopy('Need valid id card or pay slips to confirm salary', e)}>
-              <FaClipboard style={{ fontSize: '24px' }} /> Docs-reupload {/* Use the React Icon here */}
+              <span style={{ marginRight: '10px' }}>Docs</span>
+              <FaClipboard style={{ fontSize: '24px', color: '#2ecc71' }} />
             </button>
             <button className='Copy-button' onClick={(e) => handleCopy('salary not found -- ', e)}>
-              <FaClipboard style={{ fontSize: '24px' }} /> not salary {/* Use the React Icon here */}
+              <span style={{ marginRight: '10px' }}>not salary</span>
+              <FaClipboard style={{ fontSize: '24px', color: '#e74c3c' }} />
             </button>
             <button className='Copy-button' onClick={(e) => handleCopy('Need to confirm salary -- ', e)}>
-              <FaClipboard style={{ fontSize: '24px' }} /> salary-hold {/* Use the React Icon here */}
+              <span style={{ marginRight: '10px' }}>salary-hold</span>
+              <FaClipboard style={{ fontSize: '24px', color: '#f39c12' }} />
             </button>
             <button className='Copy-button' onClick={(e) => handleCopy('Need till date bank statement -- Hence given p-reset ', e)}>
-              <FaClipboard style={{ fontSize: '24px' }} /> 1m p-reset {/* Use the React Icon here */}
+              <span style={{ marginRight: '10px' }}>1m p-reset</span>
+              <FaClipboard style={{ fontSize: '24px', color: '#9b59b6' }} />
             </button>
           </div>
           <div className='button-row'></div>

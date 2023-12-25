@@ -2,7 +2,7 @@
 .footer-container {
   position: fixed;
   bottom: 0;
-  width: 90%;
+  width: 88%;
   min-height: 10px;
   display: flex;
   flex-direction: row;
@@ -39,31 +39,38 @@
   font-size: large;
   font-weight: bolder;
 }
+
+/* Team Profiles Styles */
 .team-profiles {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 20px; /* Increase the gap between profiles for better spacing */
   overflow: hidden;
   position: absolute;
   bottom: 50px;
-  right: 720px;
+  right: 50px; /* Adjust the right position as needed */
   border-radius: 20px;
-  max-width: 350px;
-  max-height: 320px;
+  max-width: 600px; /* Increase the maximum width for a larger container */
+  height: auto; /* Allow the container to adjust its height based on content */
   backdrop-filter: blur(10px);
+  padding: 20px; /* Add padding for a Glassmorphism effect */
+  background-color: rgba(29, 43, 58, 0.8); /* Adjust the background color and opacity */
 }
 
+/* Profile Card Styles */
 .profile {
-  width: 190px; /* Adjust profile width */
+  width: 100%; /* Adjust profile width to fill the container */
   height: 150px; /* Adjust profile height */
   transition: transform 0.3s ease; /* Sliding animation */
-  background-color: #1d2b3a;
-  font-weight: bolder;
+  background-color: rgba(29, 43, 58, 0.9); /* Glassmorphism effect */
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+  padding: 15px;
 }
 
 .team-profiles.hidden .profile {
@@ -81,7 +88,14 @@
   color: #777;
   margin-bottom: 5px;
 }
+
 .profile Avatar {
   /* Center the Avatar */
   margin: auto;
 }
+
+.blur-background {
+  filter: blur(5px); /* Adjust the blur amount as needed */
+  pointer-events: none; /* Prevent clicks on the blurred area */
+}
+
