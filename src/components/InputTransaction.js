@@ -69,12 +69,16 @@ const InputTransaction = () => {
       </div>
       <div className="input-row">
         <input
-        style={{color: "white"}}
-          type="text"
-          value={finalResult}
-          readOnly
-          placeholder={'Final Result will be displayed here'}
-          className={showFinalResult ? 'visible' : 'Final Result'}
+  style={{
+    color: "white",
+    backgroundColor: "transparent",
+    width: "100%", /* Set width to take up the available space */
+    maxWidth: "100%", /* Ensure the input doesn't exceed its container */
+  }}        type="text"
+        value={finalResult}
+        readOnly
+        placeholder={'Final Result will be displayed here'}
+        className={showFinalResult ? 'visible' : 'Final Result'}
         />
       </div>
     </div>

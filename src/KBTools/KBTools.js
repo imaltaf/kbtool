@@ -1,22 +1,19 @@
-import './App.css';
-
+// KBTools.js
+import React from 'react';
 import InputTransaction from './components/InputTransaction';
 import CopyButton from './CopyButton/CopyButtons';
 import CompanySearchEngine from './Search/CompanySearchEngine';
 import Footer from './Footer/Footer';
-import Navbar from './Navbar/Navbar';
 
-function App() {
+const KBTools = () => {
   return (
-    <div className="App">
-      <Navbar />
+    <div>
       <InputTransaction />
       <CopyButton />
       <CompanySearchEngine />
       <Footer />
-     
     </div>
   );
-}
+};
 
-export default App;
+export default KBTools;

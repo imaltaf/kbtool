@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { FaClipboard } from 'react-icons/fa'; // Import the desired React Icon
 import './CopyButton.css'; // Import your CSS file for styling
+// import * as React from 'react';
+// import Box from '@mui/material/Box';
+// import Button from '@mui/material/Button';
 
 const CopyButton = () => {
   const [copiedText, setCopiedText] = useState('');
@@ -29,8 +32,8 @@ const CopyButton = () => {
   return (
     <div style={{border: "20px"}} className='container-button'>
       <div className='copy-button-container'>
-        <h1>copy-comments</h1>
-        <div className='buttons-container'>
+        <h1 style={{margin: "10px", padding: "10px"}}> copy-comments</h1>
+        <div className='buttons-container' style={{paddingTop: "15px", margin: "25px"}}>
           <div className='button-row-right'>
             <button className='Copy-button' onClick={(e) => handleCopy('QID75-Latest 3-months statement not available, Need Recent 3/6 Months Bank Acc statement Hence Given Preset.', e)}>
               <FaClipboard style={{ fontSize: '24px' }} /> QID-75 {/* Use the React Icon here */}

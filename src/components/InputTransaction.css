@@ -18,19 +18,12 @@
   backdrop-filter: blur(10px); /* Blur effect for glassy look */
   box-shadow: 0px 0px 8px 6px rgba(255, 215, 0, 0.8); /* Golden fire-like color */
   transition: box-shadow 0.3s ease, border-radius 0.3s ease;
-
-
 }
+
 .transaction-container:hover {
   border-radius: 20px;
   box-shadow: 0px 0px 3px 8px rgba(255, 215, 0, 0.8); /* Golden fire-like color */
 }
-
-
-
-/* Rest of your existing styles */
-
-
 
 .input-row {
   margin-bottom: 20px;
@@ -43,13 +36,14 @@ input {
   border-radius: 20px;
   font-size: 14px;
   background-color: transparent;
- 
-
 }
 
 input:focus {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  
+}
+
+input:hover {
+  border-color: rgba(255, 215, 0, 0.8); /* Golden fire-like color */
 }
 
 /* Initially invisible */
@@ -69,9 +63,9 @@ input:focus {
 .copy-button,
 .reset-button {
   background: transparent;
- padding: 12px 18px;
+  padding: 12px 18px;
   margin-right: 10px; 
-  background-color: #1d2b3a;;
+  background-color: #1d2b3a;
   border: 2px solid #007bff;
   border-radius: 20px;
   color: white;
@@ -93,6 +87,7 @@ input:focus {
   background-color: #c82333;
   border-color: #c82333;
 }
+
 .input-row input {
   width: 100%;
   padding: 10px;
@@ -102,6 +97,7 @@ input:focus {
   font-family: 'Arial', sans-serif;
   transition: border-color 0.3s ease, border-width 0.3s ease; /* Add transition for border color and width */
 }
+
 .input-row input:focus {
   border-color: rgba(255, 215, 0, 0.8); /* Golden fire-like color */
   border-width: 3px; /* Adjust border width */
