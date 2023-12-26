@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { writeText } from 'clipboard-polyfill';
 import './InputTransaction.css';
 import { FaCopy } from 'react-icons/fa';
 import { MdRefresh } from 'react-icons/md';
@@ -20,28 +21,33 @@ const InputTransaction = () => {
     setInputFocus('secondInput');
   };
 
-  const handleCopy = () => {
+  const handleCopy = async () => {
     let result;
 
     if (!customerId.trim() && enteredIds.trim()) {
-      // Only transaction IDs in the second input
       const enteredIdsArray = enteredIds.split(' ').filter(Boolean);
       result = `${enteredIdsArray.length}:${enteredIdsArray.join(',')}`;
     } else {
-      // Both customer ID and transaction IDs
       const enteredIdsArray = enteredIds.split(' ').filter(Boolean);
       result = `${customerId}:${enteredIdsArray.length}:${enteredIdsArray.join(',')}`;
     }
 
     setFinalResult(result.replace(/\s/g, ''));
     setShowFinalResult(true);
+
+    try {
+      await writeText(result.replace(/\s/g, ''));
+      console.log('Text copied to clipboard:', result.replace(/\s/g, ''));
+    } catch (error) {
+      console.error('Failed to copy text to clipboard:', error);
+    }
   };
 
   const handleReset = () => {
     setCustomerId('');
     setEnteredIds('');
     setFinalResult('');
-    // setShowFinalResult(false);
+    setShowFinalResult(false);
   };
 
   return (
