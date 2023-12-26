@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/imaltaf/kbtool.git/static/css/main.3b597fd2.css",
-    "main.js": "/imaltaf/kbtool.git/static/js/main.1b3f7a68.js",
-    "static/js/787.351cec52.chunk.js": "/imaltaf/kbtool.git/static/js/787.351cec52.chunk.js",
-    "static/media/11Logo11-removebg-preview.png": "/imaltaf/kbtool.git/static/media/11Logo11-removebg-preview.6f386f74dbf9b98cedbc.png",
-    "static/media/op2.png": "/imaltaf/kbtool.git/static/media/op2.4f5598dc60f7985f9b87.png",
-    "index.html": "/imaltaf/kbtool.git/index.html",
-    "main.3b597fd2.css.map": "/imaltaf/kbtool.git/static/css/main.3b597fd2.css.map",
-    "main.1b3f7a68.js.map": "/imaltaf/kbtool.git/static/js/main.1b3f7a68.js.map",
-    "787.351cec52.chunk.js.map": "/imaltaf/kbtool.git/static/js/787.351cec52.chunk.js.map"
+    "main.css": "/imaltaf/kbtool/static/css/main.3b597fd2.css",
+    "main.js": "/imaltaf/kbtool/static/js/main.437e94b3.js",
+    "static/js/787.351cec52.chunk.js": "/imaltaf/kbtool/static/js/787.351cec52.chunk.js",
+    "static/media/11Logo11-removebg-preview.png": "/imaltaf/kbtool/static/media/11Logo11-removebg-preview.6f386f74dbf9b98cedbc.png",
+    "static/media/op2.png": "/imaltaf/kbtool/static/media/op2.4f5598dc60f7985f9b87.png",
+    "index.html": "/imaltaf/kbtool/index.html",
+    "main.3b597fd2.css.map": "/imaltaf/kbtool/static/css/main.3b597fd2.css.map",
+    "main.437e94b3.js.map": "/imaltaf/kbtool/static/js/main.437e94b3.js.map",
+    "787.351cec52.chunk.js.map": "/imaltaf/kbtool/static/js/787.351cec52.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b597fd2.css",
-    "static/js/main.1b3f7a68.js"
+    "static/js/main.437e94b3.js"
   ]
 }
