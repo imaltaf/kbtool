@@ -1,23 +1,15 @@
-# Use an official Node.js runtime with Alpine Linux as the base image
-FROM node:14-alpine
-
+# Use an official Node.js runtime as a base image
+FROM node:14
 # Set the working directory in the container
-WORKDIR /app
-
-# Copy the package.json and package-lock.json files to the container
+WORKDIR /usr/src/app
+# Copy package.json and package-lock.json to the 
+# working directory
 COPY package*.json ./
-
-# Install Node.js dependencies
-RUN npm install --production
-
-# Copy the entire React app source code to the container
+# Install application dependencies
+RUN npm install
+# Copy the application code to the container
 COPY . .
-
-# Build the React app for production
-RUN npm run build
-
-# Expose port 3000 (or any other port your Node.js app uses)
+# Expose the port on which your app will run
 EXPOSE 3000
-
-# Start the Node.js server when the container starts
+# Define the command to run your application
 CMD ["npm", "start"]

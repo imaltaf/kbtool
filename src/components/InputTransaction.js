@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { writeText } from 'clipboard-polyfill';
 import './InputTransaction.css';
 import { FaCopy } from 'react-icons/fa';
@@ -9,16 +9,33 @@ const InputTransaction = () => {
   const [enteredIds, setEnteredIds] = useState('');
   const [finalResult, setFinalResult] = useState('');
   const [showFinalResult, setShowFinalResult] = useState(false);
-  const [inputFocus, setInputFocus] = useState(null);
+  const [resetTimer, setResetTimer] = useState(null);
+
+  useEffect(() => {
+    let timerId;
+
+    if (resetTimer !== null) {
+      timerId = setInterval(() => {
+        setResetTimer((prevTimer) => prevTimer - 1000);
+
+        if (resetTimer <= 0) {
+          clearInterval(timerId);
+          handleReset();
+        }
+      }, 1000);
+    }
+
+    return () => clearInterval(timerId);
+  }, [resetTimer]);
 
   const handleCustomerIdChange = (e) => {
     setCustomerId(e.target.value);
-    setInputFocus('firstInput');
+    setResetTimer(null); // Reset timer when input changes
   };
 
   const handleEnteredIdsChange = (e) => {
     setEnteredIds(e.target.value);
-    setInputFocus('secondInput');
+    setResetTimer(null); // Reset timer when input changes
   };
 
   const handleCopy = async () => {
@@ -38,6 +55,7 @@ const InputTransaction = () => {
     try {
       await writeText(result.replace(/\s/g, ''));
       console.log('Text copied to clipboard:', result.replace(/\s/g, ''));
+      setResetTimer(10000); // 10 seconds in milliseconds
     } catch (error) {
       console.error('Failed to copy text to clipboard:', error);
     }
@@ -48,16 +66,23 @@ const InputTransaction = () => {
     setEnteredIds('');
     setFinalResult('');
     setShowFinalResult(false);
+    setResetTimer(null);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleCopy();
+    }
   };
 
   return (
     <div className='transaction-container'>
-      <h1>In-put Transaction IDs</h1>
       <div className="input-row">
         <input
           type="text"
           value={customerId}
           onChange={handleCustomerIdChange}
+          onKeyDown={handleKeyPress}
           placeholder=" QID 106 and 117"
           style={{ width: '330px', fontWeight: "bold", color: "whitesmoke" }}
         />
@@ -67,16 +92,17 @@ const InputTransaction = () => {
           type="text"
           value={enteredIds}
           onChange={handleEnteredIdsChange}
+          onKeyDown={handleKeyPress}
           placeholder="Enter transaction IDs"
           style={{ fontFamily: "sans-serif", fontSmooth: "large", fontWeight: "bold", width: '1570px', color: "whitesmoke" }}
         />
       </div>
       <div className="input-row button-row">
-        <button style={{ background: "#0056b3", fontWeight: "bold", fontSize: "18px" }} className="copy-button" onClick={handleCopy}>
+        <button style={{ fontWeight: "bold", fontSize: "18px" }} className="copy-button" onClick={handleCopy}>
           <FaCopy style={{ fontSize: "20px" }} /> Copy
         </button>
-        <button style={{ fontWeight: "bold", fontSize: "20px" }} className="reset-button" onClick={handleReset}>
-          <MdRefresh style={{ fontSize: "20px" }} /> Reset
+        <button style={{ fontWeight: "bold", fontSize: "20px" }} className="reset-button" onClick={handleReset} disabled={resetTimer !== null}>
+          <MdRefresh style={{ fontSize: "20px" }} /> Reset {resetTimer !== null && `(${Math.ceil(resetTimer / 1000)}s)`}
         </button>
       </div>
       <div className="input-row">

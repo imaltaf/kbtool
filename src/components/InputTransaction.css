@@ -16,13 +16,13 @@
   position: relative; /* Add a position */
   z-index: 1; /* Ensure it's behind other elements */
   backdrop-filter: blur(10px); /* Blur effect for glassy look */
-  box-shadow: 0px 0px 8px 6px rgba(255, 215, 0, 0.8); /* Golden fire-like color */
+  box-shadow: 0px 0px 8px 6px rgba(116, 116, 116, 0.8); /* Golden fire-like color */
   transition: box-shadow 0.3s ease, border-radius 0.3s ease;
 }
 
 .transaction-container:hover {
   border-radius: 20px;
-  box-shadow: 0px 0px 3px 8px rgba(255, 215, 0, 0.8); /* Golden fire-like color */
+  box-shadow: 0px 0px 3px 8px rgba(131, 131, 131, 0.8); /* Golden fire-like color */
 }
 
 .input-row {
@@ -36,8 +36,8 @@ input {
   border-radius: 30px;
   font-size: 14px;
   background-color: transparent;
-  border-color: #ffeb3b; /* Yellow border color on focus */
-  box-shadow: 0 0 20px rgba(255, 255, 0, 0.8); /* Intensify the glow on focus */
+  border-color: #868686; /* Yellow border color on focus */
+  box-shadow: 0 0 20px rgba(94, 94, 94, 0.8); /* Intensify the glow on focus */
 
 }
 
@@ -63,27 +63,43 @@ input:hover {
   margin-top: 10px;
 }
 
-.copy-button,
-.reset-button {
+.copy-button {
   background: transparent;
-  padding: 12px 18px;
-  margin-right: 10px; 
-  background-color: #1d2b3a;
-  border: 2px solid #007bff;
+  padding: 14px 24px; /* Updated padding for larger size */
+  margin-right: 10px;
+  border: 2px solid transparent;
+  border-color: #bebebe;
   border-radius: 20px;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.copy-button:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+  font-size: 18px; /* Updated font size */
 }
 
 .reset-button {
-  background-color: #dc3545;
-  border: 2px solid #dc3545;
+  background: transparent;
+  padding: 14px 24px; /* Updated padding for larger size */
+  margin-right: 10px;
+  border: 2px solid transparent;
+  border-color: #bebebe;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+  font-size: 18px; /* Updated font size */
+}
+.copy-button:hover {
+  background-color: #313131;
+  border-color: #d3d3d3; /* Purple color */
+  box-shadow: 0 0 10px rgba(134, 134, 134, 0.7); /* Glow effect */
+}
+
+.reset-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-color: #c82333;
 }
 
 .reset-button:hover {
@@ -99,6 +115,7 @@ input:hover {
   font-size: 16px;
   font-family: 'Arial', sans-serif;
   transition: border-color 0.3s ease, border-width 0.3s ease; /* Add transition for border color and width */
+  margin-top: 25px; /* Adjust the value as needed */
 }
 
 .input-row input:focus {
