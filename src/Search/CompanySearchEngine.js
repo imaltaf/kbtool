@@ -12,6 +12,7 @@ const CompanySearchEngine = () => {
 
   const openTab = (url) => {
     window.open(url, '_blank');
+    resetInput(); // Auto-reset after clicking any button
   };
 
   const searchAll = () => {
@@ -34,8 +35,7 @@ const CompanySearchEngine = () => {
       queries.forEach((query, index) => {
         setTimeout(() => openTab(query), (index + 1) * 1000); // Open each tab with a delay of 1 second
       });
-      resetInput();
-    }, 1000));
+    }, 15000));
   };
 
   return (
@@ -58,22 +58,23 @@ const CompanySearchEngine = () => {
       </div>
 
       <div className="button-container">
-        <button className="search-button zauba" onClick={() => openTab(`https://www.google.com/search?q=${encodeURIComponent(document.getElementById('companyName').value + '+zaubacorp')}`)}>
-          Zauba <FaSearch className="icon" /> {/* Search icon */}
-        </button>
-        <button className="search-button company-check" onClick={() => openTab(`https://www.google.com/search?q=${encodeURIComponent(document.getElementById('companyName').value + '+thecompanycheck')}`)}>
-          Company Check <FaSearch className="icon" /> {/* Search icon */}
-        </button>
-        <button className="search-button tofler" onClick={() => openTab(`https://www.google.com/search?q=${encodeURIComponent(document.getElementById('companyName').value + '+tofler')}`)}>
-          Tofler <FaSearch className="icon" /> {/* Search icon */}
-        </button>
-        <button className="search-button website" onClick={() => openTab(`https://www.google.com/search?q=${encodeURIComponent(document.getElementById('companyName').value + '+site')}`)}>
-          Website <FaSearch className="icon" /> {/* Search icon */}
-        </button>
-        <button className="search-button all" onClick={searchAll}>
-          All Search <FaSearch className="icon" /> {/* Search icon */}
-        </button>
-      </div>
+  <button className="search-button zauba" onClick={() => openTab(`https://www.google.com/search?q=${encodeURIComponent(document.getElementById('companyName').value + '+zaubacorp')}`)}>
+    Zauba <FaSearch className="icon" style={{ margin: '0, 6px' }} /> {/* Search icon */}
+  </button>
+  <button className="search-button company-check" onClick={() => openTab(`https://www.google.com/search?q=${encodeURIComponent(document.getElementById('companyName').value + '+thecompanycheck')}`)}>
+    Company Check <FaSearch className="icon" style={{ margin: '0, 6px' }} /> {/* Search icon */}
+  </button>
+  <button className="search-button tofler" onClick={() => openTab(`https://www.google.com/search?q=${encodeURIComponent(document.getElementById('companyName').value + '+tofler')}`)}>
+    Tofler <FaSearch className="icon" style={{ margin: '0, 6px' }} /> {/* Search icon */}
+  </button>
+  <button className="search-button website" onClick={() => openTab(`https://www.google.com/search?q=${encodeURIComponent(document.getElementById('companyName').value + '+site')}`)}>
+    Website <FaSearch className="icon" style={{ margin: '0, 6px' }} /> {/* Search icon */}
+  </button>
+  <button className="search-button all" onClick={searchAll}>
+    All Search <FaSearch className="icon" style={{ margin: '0, 6px' }} /> {/* Search icon */}
+  </button>
+</div>
+
     </section>
   );
 };

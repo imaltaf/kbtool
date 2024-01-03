@@ -31,33 +31,42 @@ const Navbar = () => {
           <MenuIcon />
         </IconButton>
 
-        {/* Dropdown */}
-        <Menu
-          id="menu-appbar"
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleMenuClose}
-          anchorOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          getContentAnchorEl={null}
-          elevation={0}
-          PaperProps={{
-            style: {
-              background: 'rgba(255, 255, 255, 0.8)',
-              boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.1)',
-              borderRadius: '8px',
-            },
-          }}
-        >
-          <MenuItem onClick={handleMenuClose}>KB-Tool</MenuItem>
-          <MenuItem onClick={handleMenuClose}>BL-Tools</MenuItem>
-        </Menu>
+    {/* Dropdown */}
+    <Menu
+      id="menu-appbar"
+      anchorEl={anchorEl}
+      open={Boolean(anchorEl)}
+      onClose={handleMenuClose}
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      transformOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      getContentAnchorEl={null}
+      elevation={0}
+      PaperProps={{
+        style: {
+          background: 'rgba(255, 255, 255, 0.8)',
+          boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.1)',
+          borderRadius: '8px',
+        },
+      }}
+    >
+      {/* Add links to your tools */}
+      <MenuItem onClick={handleMenuClose}>
+        <a href="https://kbtool.imaltaf.site/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          KB-Tool
+        </a>
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <a href="https://bl.imaltaf.site/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          BL-Tool
+        </a>
+      </MenuItem>
+    </Menu>
       </Toolbar>
     </AppBar>
   );

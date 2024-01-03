@@ -39,6 +39,11 @@ const InputTransaction = () => {
   };
 
   const handleCopy = async () => {
+    if (!customerId.trim() && !enteredIds.trim()) {
+      alert('Please enter valid IDs'); // Display popup message for empty inputs
+      return;
+    }
+
     let result;
 
     if (!customerId.trim() && enteredIds.trim()) {
