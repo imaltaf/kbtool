@@ -22,7 +22,7 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="copyright">
       <span style={{ fontSize: '20px' }}>
-  © 2023 to 2024 All rights reserved<span style={{ marginLeft: '50px' }}>Developed By : Team-X1</span>
+  © 2023 to 2024 All rights reserved<span style={{ marginLeft: '50px' }}>Developed By : OSAI-Team</span>
 </span>
 
 

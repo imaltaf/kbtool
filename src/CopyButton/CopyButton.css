@@ -1,3 +1,38 @@
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .container-button {
+    width: 90%;
+    max-width: none;
+    height: auto;
+    padding: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .Copy-button {
+    width: 100%;
+  }
+  
+  .buttons-container {
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .container-button {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1920px) {
+  .container-button {
+    width: 60%;
+  }
+}
+
+
 .container-button {
   position: absolute;
   width: 40%;
@@ -20,7 +55,8 @@
   column-gap: 17px;
   border-radius: 25px;
   transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Adding transition */
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   box-shadow: 0px 0px 8px 6px rgba(100, 100, 100, 0.8); /* Golden fire-like color */
   /* Maintain the border radius */
   margin-bottom: 10px;
@@ -45,7 +81,7 @@
   align-items: center;
   padding-top: 50px;
   width: 100%;
-  max-width: 100px;
+  max-width: 1200px;
   margin-bottom: 10px;
   border-color: #868686;
 }

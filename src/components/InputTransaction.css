@@ -2,27 +2,26 @@
 .transaction-container {
   width: 90%;
   margin: 10px auto;
-  padding: 0px;
+  padding: 0;
   background-color: #1d2b3a;
-  border-radius: 25px; /* Adjusted border-radius */
+  border-radius: 25px;
   padding: 1px 1px;
   cursor: pointer;
   font-size: 16px;
-  line-height: 14px;
+  line-height: 1.4;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: rgb(255, 255, 255);
+  color: #fff;
   text-decoration: none;
-  transition: border-color 0.3s ease, border-radius 0.3s ease;
-  position: relative; /* Add a position */
-  z-index: 1; /* Ensure it's behind other elements */
-  backdrop-filter: blur(10px); /* Blur effect for glassy look */
-  box-shadow: 0px 0px 8px 6px rgba(116, 116, 116, 0.8); /* Golden fire-like color */
-  transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+  transition: border-color 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 8px 6px rgba(116, 116, 116, 0.8);
 }
 
 .transaction-container:hover {
   border-radius: 20px;
-  box-shadow: 0px 0px 3px 8px rgba(131, 131, 131, 0.8); /* Golden fire-like color */
+  box-shadow: 0 0 3px 8px rgba(131, 131, 131, 0.8);
 }
 
 .input-row {
@@ -30,15 +29,15 @@
 }
 
 input {
-  width: 50%;
+  width: 100%;
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 30px;
   font-size: 14px;
   background-color: transparent;
-  border-color: #868686; /* Yellow border color on focus */
-  box-shadow: 0 0 20px rgba(94, 94, 94, 0.8); /* Intensify the glow on focus */
-
+  border-color: #868686;
+  box-shadow: 0 0 20px rgba(94, 94, 94, 0.8);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 input:focus {
@@ -46,84 +45,62 @@ input:focus {
 }
 
 input:hover {
-  border-color: rgba(255, 215, 0, 0.8); /* Golden fire-like color */
+  border-color: rgba(255, 215, 0, 0.8);
 }
 
-/* Initially invisible */
 .input-row:last-child input[type='text'] {
   opacity: 0;
   height: 0;
   transition: opacity 0.3s ease, height 0.3s ease;
 }
 
-/* Visible on copy button click */
 .input-row:last-child input[type='text'].visible {
   opacity: 1;
   height: auto;
   margin-top: 10px;
 }
 
-.copy-button {
-  background: transparent;
-  padding: 14px 24px; /* Updated padding for larger size */
-  margin-right: 10px;
-  border: 2px solid transparent;
-  border-color: #bebebe;
-  border-radius: 20px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  margin-top: 10px;
-  font-size: 18px; /* Updated font size */
-}
-
+.copy-button,
 .reset-button {
   background: transparent;
-  padding: 14px 24px; /* Updated padding for larger size */
+  padding: 14px 24px;
   margin-right: 10px;
   border: 2px solid transparent;
-  border-color: #bebebe;
   border-radius: 20px;
-  color: white;
+  color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   margin-top: 10px;
-  font-size: 18px; /* Updated font size */
+  font-size: 18px;
 }
+
+.copy-button:hover,
+.reset-button:hover {
+  box-shadow: 0 0 10px rgba(134, 134, 134, 0.7);
+}
+
 .copy-button:hover {
   background-color: #313131;
-  border-color: #d3d3d3; /* Purple color */
-  box-shadow: 0 0 10px rgba(134, 134, 134, 0.7); /* Glow effect */
+  border-color: #d3d3d3;
 }
 
 .reset-button {
-  background-color: transparent;
-  border: 2px solid transparent;
   border-color: #c82333;
 }
 
 .reset-button:hover {
   background-color: #c82333;
-  border-color: #c82333;
 }
 
 .input-row input {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid transparent; /* Set initial border as transparent */
-  border-radius: 20px;
-  font-size: 16px;
-  font-family: 'Arial', sans-serif;
-  transition: border-color 0.3s ease, border-width 0.3s ease; /* Add transition for border color and width */
-  margin-top: 25px; /* Adjust the value as needed */
+  margin-top: 15px;
 }
 
 .input-row input:focus {
-  border-color: rgba(255, 215, 0, 0.8); /* Golden fire-like color */
-  border-width: 3px; /* Adjust border width */
+  border-color: rgba(255, 215, 0, 0.8);
+  border-width: 3px;
 }
 
-/* For the final result input */
 .input-row:last-child input[type='text'] {
   opacity: 0;
   height: 0;
@@ -132,8 +109,8 @@ input:hover {
   border: none;
   color: antiquewhite;
   font-weight: bold;
-  font-size: x-large; /* Adjusted font size */
-  font-family: 'Roboto', sans-serif; /* Different font family */
+  font-size: x-large;
+  font-family: 'Roboto', sans-serif;
 }
 
 .input-row:last-child input[type='text'].visible {
