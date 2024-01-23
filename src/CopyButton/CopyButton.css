@@ -57,6 +57,25 @@
   gap: 4px;
 }
 
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 10px;
+  border-color: #868686;
+}
+
+.button-row-right {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
 .Copy-button {
   background: transparent;
   border: 2px solid #868686;
@@ -97,13 +116,4 @@
   .Copy-button {
     width: calc(20% - 10px);
   }
-}
-
-.container-button:hover .copied-message {
-  opacity: 1;
-}
-
-.container-button:hover {
-  border-color: rgba(255, 0, 0, 0.5);
-  border-radius: 30px;
 }
